@@ -7,7 +7,8 @@
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+	# shellcheck disable=1091
+	source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
 export BASH_PROFILE="${HOME}/.bash_profile"

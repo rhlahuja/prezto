@@ -1,4 +1,3 @@
-
 # set-host-zprofile() {
 # 	HOST_ZPROFILE="${HOME}/.zprofiles/$(hostname -s).sh"
 #	export HOST_ZPROFILE
