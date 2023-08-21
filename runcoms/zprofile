@@ -1,20 +1,20 @@
+# export HOSTNAME_CACHE="${HOME}/.hostname"
+# export ZPROFILES_ROOT="${HOME}/.zprofiles"
+
+
 # set-host-zprofile() {
-# 	HOST_ZPROFILE="${HOME}/.zprofiles/$(hostname -s).sh"
-#	export HOST_ZPROFILE
+# 	if [[ ! -s ${HOSTNAME_CACHE} ]]; then
+# 		hostname -s > "${HOSTNAME_CACHE}"
+# 	fi
+
+# 	HOSTNAME_SHORT="$(<"${HOSTNAME_CACHE}")"
+# 	HOST_ZPROFILE="${ZPROFILES_ROOT}/${HOSTNAME_SHORT}.sh"
+	
+# 	export HOSTNAME_SHORT
+# 	export HOST_ZPROFILE
 # }
 
-export HOSTNAME_CACHE="${HOME}/.hostname"
-export ZPROFILES_ROOT="${HOME}/.zprofiles"
-
-set-host-zprofile() {
-	if [[ ! -f ${HOSTNAME_CACHE} ]]; then
-		hostname -s > "${HOSTNAME_CACHE}"
-	fi
-	HOST_ZPROFILE="${ZPROFILES_ROOT}/$(<"${HOSTNAME_CACHE}").sh"
-	export HOST_ZPROFILE
-}
-
-# shellcheck disable=1090
-set-host-zprofile \
-&& [[ -f ${HOST_ZPROFILE} ]] \
-&& source "${HOST_ZPROFILE}"
+# # shellcheck disable=1090
+# set-host-zprofile \
+# && [[ -f ${HOST_ZPROFILE} ]] \
+# && source "${HOST_ZPROFILE}"
