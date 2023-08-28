@@ -71,7 +71,7 @@ zstyle ':prezto:load' pmodule \
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 
 # Auto convert .... to ../..
-# zstyle ':prezto:module:editor' dot-expansion 'yes'
+zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 # Allow the zsh prompt context to be shown.
 #zstyle ':prezto:module:editor' ps-context 'yes'
@@ -86,6 +86,9 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 #
 # GNU Utility
 #
+
+# Disable Git aliases.
+zstyle ':prezto:module:git:alias' skip 'yes'
 
 # Set the command prefix on non-GNU systems.
 zstyle ':prezto:module:gnu-utility' prefix 'g'  # Default prefix
